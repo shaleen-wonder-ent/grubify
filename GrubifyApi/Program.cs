@@ -7,6 +7,9 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
+// Add Application Insights telemetry (reads APPLICATIONINSIGHTS_CONNECTION_STRING from env)
+builder.Services.AddApplicationInsightsTelemetry();
+
 // Configure forwarded headers for Azure Container Apps
 builder.Services.Configure<ForwardedHeadersOptions>(options =>
 {
